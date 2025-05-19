@@ -1,64 +1,92 @@
-/* Base styling */
+/* Base dark theme */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #121212;
   color: #e0e0e0;
 }
 
-/* Header */
-header {
-  background-color: #1f1f1f;
-  padding: 20px;
+/* Navigation styles */
+nav {
+  background-color: #1e1e1e;
+  padding: 1rem;
   text-align: center;
   border-bottom: 1px solid #333;
 }
 
-header h1 {
+nav ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 2em;
 }
 
-/* Main content */
-main {
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Layout container */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Profile section */
-.profile {
-  max-width: 800px;
-  width: 100%;
+/* Profile image area */
+.profile-pic {
+  flex: 1 1 250px;
+  max-width: 250px;
+  margin-right: 2rem;
   text-align: center;
 }
 
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+.profile-pic img {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #333;
+  border-radius: 50%;
+  border: 3px solid #444;
 }
 
-.summary h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+/* Bio text area */
+.bio {
+  flex: 2 1 400px;
 }
 
-.summary p {
-  font-size: 1em;
-  line-height: 1.6;
+.bio h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.bio h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
   color: #ccc;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1f1f1f;
-  border-top: 1px solid #333;
-  font-size: 0.9em;
+.bio h2 span {
+  font-style: italic;
+}
+
+.bio p {
+  line-height: 1.6;
+  margin-top: 1rem;
 }
